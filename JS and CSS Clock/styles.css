@@ -44,3 +44,7 @@ body {
   transform: rotate(90deg);
   transition: all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
 }
+
+.notransition {
+  transition: none;
+}

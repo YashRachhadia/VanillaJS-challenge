@@ -7,6 +7,12 @@ setInterval(() => {
 
   const seconds = now.getSeconds();
   const secondsDegrees = (seconds / 60) * 360 + 90;
+  if (secondHand.classList.contains("notransition")) {
+    secondHand.classList.remove("notransition");
+  }
+  if (secondsDegrees === 90) {
+    secondHand.classList.add("notransition");
+  }
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
   const mins = now.getMinutes();
